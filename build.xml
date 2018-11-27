@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<project default="Replace_Config_With_Dev" basedir="." name="nlp-log"> 
+
+	<property name="pom.xml" value="pom.xml" />
+	<property name="log4j.xml" value="src\main\resources\log4j.xml" />
+	
+	<target name="Replace_Config_With_Dev">
+		<copy tofile="${pom.xml}" file="deploy\pom.xml.dev" overwrite="true"/>
+		<copy tofile="${log4j.xml}" file="deploy\log4j.xml.dev" overwrite="true"/>
+	</target>
+	<target name="Replace_Config_With_Uat">
+		<copy tofile="${pom.xml}" file="deploy\pom.xml.uat" overwrite="true"/>
+		<copy tofile="${log4j.xml}" file="deploy\log4j.xml.uat" overwrite="true"/>
+	</target>
+	<target name="Replace_Config_With_Prod">
+		<copy tofile="${pom.xml}" file="deploy\pom.xml.prod" overwrite="true"/>
+		<copy tofile="${log4j.xml}" file="deploy\log4j.xml.prod" overwrite="true"/>
+	</target>
+</project> 
