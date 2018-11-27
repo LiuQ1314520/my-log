@@ -18,17 +18,17 @@ public class MyLog4j {
 
 	}
 
+    public static void textDebug(String msg) {
+        try {
+            nlp.log(FQCN, Level.DEBUG, msg, null);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 	public static void textInfo(String msg) {
 		try {
 			nlp.log(FQCN, Level.INFO, msg, null);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	public static void textDebug(String msg) {
-		try {
-			nlp.log(FQCN, Level.DEBUG, msg, null);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -58,17 +58,17 @@ public class MyLog4j {
 		}
 	}
 
+    public static void textFatal(String msg) {
+        try {
+            nlp.log(FQCN, Level.FATAL, msg, null);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 	public static void textFatal(String msg, Throwable t) {
 		try {
 			nlp.log(FQCN, Level.FATAL, msg, t);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	public static void textFatal(String msg) {
-		try {
-			nlp.log(FQCN, Level.FATAL, msg, null);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
