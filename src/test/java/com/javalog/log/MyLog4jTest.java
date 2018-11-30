@@ -14,6 +14,7 @@ public class MyLog4jTest {
         MyLog4j.textInfo("info message");
     }
 
+    @Test
     public void testTextWarn() {
         MyLog4j.textWarn("warn message");
     }
@@ -25,16 +26,7 @@ public class MyLog4jTest {
 
     @Test
     public void testTextErrorException() {
-        MyLog4j.textError("error message", new Exception("exception message"));
+        MyLog4j.textError("error message", new IllegalArgumentException("illegal argument exception message"));
     }
 
-    @Test
-    public void testTextFatal() {
-        MyLog4j.textFatal("fatal message");
-    }
-
-    @Test
-    public void testTextFatalException() {
-        MyLog4j.textFatal("fatal message", new Exception("exception message"));
-    }
 }
